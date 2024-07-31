@@ -7,7 +7,11 @@ import streamlit as st
 
 from llama_index.llms.groq import Groq
 from llama_index.core.llms import ChatMessage
+from dotenv import load_dotenv
+import os
 
+load_dotenv() 
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")  
 
 
 def main():
@@ -16,7 +20,7 @@ def main():
     """
 
     # Get Groq API key
-    llm = Groq(model="llama3-70b-8192", api_key="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") # Replace 'your_api' with your actual API key
+    llm = Groq(model="llama3-70b-8192", api_key=GROQ_API_KEY) # Replace 'your_api' with your actual API key
 
     user_question = st.text_input("Ask a question:")
 
