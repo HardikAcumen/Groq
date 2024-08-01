@@ -10,7 +10,7 @@ from AI.API import chat_API
 def main():
     user_question = st.text_input("Ask a question:")
 
-
+    
     response = chat_API(user_question)
     st.write(response)
 
