@@ -2,3 +2,4 @@ Groq_Chatbot/.env
 FAIISS/.env
 ChatBot.ipynb
 venv/*
+ENC/*
