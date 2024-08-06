@@ -123,6 +123,8 @@ def model_RAG(GROQ_API_KEY : str, pipeline : IngestionPipeline ,
 
 
 
+# Main codes and Hardcode values which will be used when using this code as module.
+
 # load_dotenv() 
 # GROQ_API_KEY = os.getenv("GROQ_API_KEY") 
 
