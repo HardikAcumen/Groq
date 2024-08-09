@@ -1,22 +1,22 @@
-from  ingestion_pipeline_creator import run_pipeline , build_pipeline
+from  FAISS.ingestion_pipeline_faiss import run_pipeline , build_pipeline , load_model
 from llama_index.core import SimpleDirectoryReader
 import logging
 import logging.config
+print("Hii")
 
 
-logging.basicConfig(filename="test.log" , level=logging.DEBUG,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+# logging.basicConfig(filename="test.log" , level=logging.DEBUG,
+#                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-logger = logging.getLogger('simpleExample')
-
-
-# documents = SimpleDirectoryReader("Data").load_data()
-# logger.info("Read the documents" , ValueError)
+# logger = logging.getLogger('simpleExample')
 
 
-query_engine , pipeline = build_pipeline("Data")
-logger.critical(f"Built Pipeline {pipeline}")
-logger.critical(f"Built query_engine {query_engine}")
+# # documents = SimpleDirectoryReader("Data").load_data()
+# # logger.info("Read the documents" , ValueError)
+
+# llm , embed_model = load_model()
+# query_engine , pipeline = build_pipeline(llm , embed_model)
+
 
 # nodes = run_pipeline(documents , pipeline)
 # logger.critical(f"inserted {len(nodes)} nodes")

@@ -22,7 +22,6 @@ from llama_index.core import VectorStoreIndex, StorageContext
 import os 
 from dotenv import load_dotenv
 
-
 logging.basicConfig(filename="built.log" , level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -38,10 +37,9 @@ Returns : query_engine and pipeline both
 It takes path_data (Path to folder where all text and pdf data is available)
 """
 
+logger = logging.getLogger('simpleExample')
 
-def build_pipeline(path_data : str):
-    logger = logging.getLogger('simpleExample')
-
+def load_model():
     llm = Groq(model="llama3-70b-8192", api_key=GROQ_API_KEY)
     logger.info('LLM Loaded')
     
@@ -49,6 +47,11 @@ def build_pipeline(path_data : str):
     embed_model = SentenceTransformer("BAAI/bge-large-en-v1.5")
     # embed_model = HuggingFaceEmbedding("BAAI/bge-large-en-v1.5")
     logger.info('Embedding Model Loaded')
+
+    return llm , embed_model
+
+
+def build_pipeline(llm : Groq , embed_model : SentenceTransformer):
 
     transformations = [
         SentenceSplitter(chunk_size=1024, chunk_overlap=20),
@@ -65,6 +68,7 @@ def build_pipeline(path_data : str):
 
     vector_store = MilvusVectorStore(uri="./milvus_demo.db", dim=384, overwrite=True)
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
+    
     
     documents = SimpleDirectoryReader("Data").load_data()
     index = VectorStoreIndex.from_documents(documents, storage_context=storage_context)
@@ -87,5 +91,7 @@ def build_pipeline(path_data : str):
 def run_pipeline(documents : list ,  pipeline : IngestionPipeline):
     nodes = pipeline.run(documents=documents)
     return nodes
+
+
 
 

@@ -1,15 +1,33 @@
-2024-08-09 15:32:22,734 - INFO - LLM Loaded
-2024-08-09 15:32:22,736 - INFO - Use pytorch device_name: cpu
-2024-08-09 15:32:22,736 - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
-2024-08-09 15:32:22,742 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
-2024-08-09 15:32:23,066 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
-2024-08-09 15:32:23,284 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
-2024-08-09 15:32:23,489 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/README.md HTTP/11" 200 0
-2024-08-09 15:32:23,704 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
-2024-08-09 15:32:24,282 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/sentence_bert_config.json HTTP/11" 200 0
-2024-08-09 15:32:24,867 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config.json HTTP/11" 200 0
-2024-08-09 15:32:25,378 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/model.safetensors HTTP/11" 302 0
-2024-08-09 15:32:25,383 - DEBUG - Attempting to acquire lock 2431977851056 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7.lock
-2024-08-09 15:32:25,384 - DEBUG - Lock 2431977851056 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7.lock
-2024-08-09 15:32:25,387 - DEBUG - Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
-2024-08-09 15:32:25,498 - DEBUG - https://cdn-lfs.huggingface.co:443 "GET /repos/7c/ec/7cecfbbb1e5b2627468d5949100139a60d432b5f80aaae3359c693d3dfb99766/45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1723456586&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyMzQ1NjU4Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy83Yy9lYy83Y2VjZmJiYjFlNWIyNjI3NDY4ZDU5NDkxMDAxMzlhNjBkNDMyYjVmODBhYWFlMzM1OWM2OTNkM2RmYjk5NzY2LzQ1ZTE5NTQ5MTRlMjliZDc0MDgwZTZjMTUxMDE2NTI3NGZmNTI3OTQyMWM4OWY3NmM0MTg4Nzg3MzJmNjRhZTc~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=K2nNkwq1lY1L5cV6kO1bxTldgDUJVEHuUfmd7tqGSOkZ7IbsOzHMqHxIp28IyQDvLBsFEd8v-204pH5w0HZvO7MlXitbNzLg1Md~8Abzz-XFscY0PhRz9cRXUEv635PWwbGS5Pb1AgllF3a9sF2~CcQQ0-FMNmhjx69QPtJj-Wm3XvhaFjuABx1xJyn42GD5DEGSsj8kpSQEo1UO~ICEomseI2u8auEujd60kkZo~uXfK7ZrexlMyTNJrIxVTdHCH9t2lp-NwDsuNPpYl66qrFeSaqS22rDLuYZMUQMpL8nBkgTHExZ0~NOcWbqA2YUIoFko2Md8xRZ4tyAKnl9Kog__&Key-Pair-Id=K3ESJI6DHPFC7 HTTP/11" 206 921186216
+2024-08-09 17:48:36,523 - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-09 17:48:36,523 - INFO - Loading faiss with AVX2 support.
+2024-08-09 17:48:36,619 - INFO - Successfully loaded faiss with AVX2 support.
+2024-08-09 17:48:36,685 - INFO - LLM Loaded
+2024-08-09 17:48:36,687 - INFO - Use pytorch device_name: cpu
+2024-08-09 17:48:36,687 - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2024-08-09 17:48:36,692 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-08-09 17:48:36,942 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
+2024-08-09 17:48:37,163 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-08-09 17:48:37,395 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/README.md HTTP/11" 200 0
+2024-08-09 17:48:37,602 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
+2024-08-09 17:48:37,814 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-08-09 17:48:38,017 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config.json HTTP/11" 200 0
+2024-08-09 17:48:38,910 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-08-09 17:48:39,223 - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-large-en-v1.5/revision/main HTTP/11" 200 148373
+2024-08-09 17:48:39,616 - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-large-en-v1.5 HTTP/11" 200 148373
+2024-08-09 17:48:39,733 - INFO - Embedding Model Loaded
+2024-08-09 17:48:42,367 - INFO - Loading llama_index.vector_stores.faiss.base from ./storage\default__vector_store.json.
+2024-08-09 17:51:16,155 - INFO - LLM Loaded
+2024-08-09 17:51:16,156 - INFO - Use pytorch device_name: cpu
+2024-08-09 17:51:16,156 - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2024-08-09 17:51:16,373 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
+2024-08-09 17:51:16,571 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-08-09 17:51:16,775 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/README.md HTTP/11" 200 0
+2024-08-09 17:51:17,031 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
+2024-08-09 17:51:17,228 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-08-09 17:51:17,433 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config.json HTTP/11" 200 0
+2024-08-09 17:51:17,923 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-08-09 17:51:18,170 - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-large-en-v1.5/revision/main HTTP/11" 200 148373
+2024-08-09 17:51:18,504 - DEBUG - https://huggingface.co:443 "GET /api/models/BAAI/bge-large-en-v1.5 HTTP/11" 200 148373
+2024-08-09 17:51:18,611 - INFO - Embedding Model Loaded
+2024-08-09 17:51:19,917 - INFO - Loading llama_index.vector_stores.faiss.base from ./storage\default__vector_store.json.
+2024-08-09 17:56:56,937 - INFO - Loading llama_index.vector_stores.faiss.base from ./storage\default__vector_store.json.
