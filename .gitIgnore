@@ -1,5 +1,8 @@
 Groq_Chatbot/.env
-FAIISS/.env
+FAISS/.env
+RAG/.env
+ProfileScraper/.env
+ChatApp/.env
 ChatBot.ipynb
 venv/*
 ENC/*
