@@ -1,0 +1,40 @@
+2024-08-09 14:24:45,706 - INFO - LLM Loaded
+2024-08-09 14:24:45,706 - INFO - Use pytorch device_name: cpu
+2024-08-09 14:24:45,706 - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2024-08-09 14:24:45,706 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-08-09 14:24:46,329 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
+2024-08-09 14:24:46,329 - DEBUG - Attempting to acquire lock 2242909497376 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2024-08-09 14:24:46,329 - DEBUG - Lock 2242909497376 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2024-08-09 14:24:46,949 - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 349
+2024-08-09 14:24:46,963 - DEBUG - Attempting to release lock 2242909497376 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2024-08-09 14:24:46,963 - DEBUG - Lock 2242909497376 released on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+2024-08-09 14:24:47,198 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-08-09 14:24:47,198 - DEBUG - Attempting to acquire lock 2242909497904 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\dcb0c0d97d09b930d13600b1a773ddb27e441aab.lock
+2024-08-09 14:24:47,198 - DEBUG - Lock 2242909497904 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\dcb0c0d97d09b930d13600b1a773ddb27e441aab.lock
+2024-08-09 14:24:47,418 - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-large-en-v1.5/resolve/main/config_sentence_transformers.json HTTP/11" 200 124
+2024-08-09 14:24:47,426 - DEBUG - Attempting to release lock 2242909497904 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\dcb0c0d97d09b930d13600b1a773ddb27e441aab.lock
+2024-08-09 14:24:47,426 - DEBUG - Lock 2242909497904 released on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\dcb0c0d97d09b930d13600b1a773ddb27e441aab.lock
+2024-08-09 14:24:47,686 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/README.md HTTP/11" 200 0
+2024-08-09 14:24:47,686 - DEBUG - Attempting to acquire lock 2242909498048 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\a5e0efee2a14fa9b1fea8a3cbacdab8f153bc49f.lock
+2024-08-09 14:24:47,686 - DEBUG - Lock 2242909498048 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\a5e0efee2a14fa9b1fea8a3cbacdab8f153bc49f.lock
+2024-08-09 14:24:47,905 - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-large-en-v1.5/resolve/main/README.md HTTP/11" 200 94607
+2024-08-09 14:24:48,108 - DEBUG - Attempting to release lock 2242909498048 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\a5e0efee2a14fa9b1fea8a3cbacdab8f153bc49f.lock
+2024-08-09 14:24:48,108 - DEBUG - Lock 2242909498048 released on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\a5e0efee2a14fa9b1fea8a3cbacdab8f153bc49f.lock
+2024-08-09 14:24:48,334 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/modules.json HTTP/11" 200 0
+2024-08-09 14:24:48,584 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-08-09 14:24:48,584 - DEBUG - Attempting to acquire lock 2242909498000 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ea85692bff64b0d1917833c31ddbca8ab10f5455.lock
+2024-08-09 14:24:48,584 - DEBUG - Lock 2242909498000 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ea85692bff64b0d1917833c31ddbca8ab10f5455.lock
+2024-08-09 14:24:48,797 - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-large-en-v1.5/resolve/main/sentence_bert_config.json HTTP/11" 200 52
+2024-08-09 14:24:48,812 - DEBUG - Attempting to release lock 2242909498000 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ea85692bff64b0d1917833c31ddbca8ab10f5455.lock
+2024-08-09 14:24:48,812 - DEBUG - Lock 2242909498000 released on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ea85692bff64b0d1917833c31ddbca8ab10f5455.lock
+2024-08-09 14:24:49,049 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/config.json HTTP/11" 200 0
+2024-08-09 14:24:49,049 - DEBUG - Attempting to acquire lock 2242909497136 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ab101ed8d012df683ef32f92cea51e97615ad07c.lock
+2024-08-09 14:24:49,049 - DEBUG - Lock 2242909497136 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ab101ed8d012df683ef32f92cea51e97615ad07c.lock
+2024-08-09 14:24:49,267 - DEBUG - https://huggingface.co:443 "GET /BAAI/bge-large-en-v1.5/resolve/main/config.json HTTP/11" 200 779
+2024-08-09 14:24:49,284 - DEBUG - Attempting to release lock 2242909497136 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ab101ed8d012df683ef32f92cea51e97615ad07c.lock
+2024-08-09 14:24:49,284 - DEBUG - Lock 2242909497136 released on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\ab101ed8d012df683ef32f92cea51e97615ad07c.lock
+2024-08-09 14:24:49,802 - DEBUG - https://huggingface.co:443 "HEAD /BAAI/bge-large-en-v1.5/resolve/main/model.safetensors HTTP/11" 302 0
+2024-08-09 14:24:49,802 - DEBUG - Attempting to acquire lock 2242929278784 on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7.lock
+2024-08-09 14:24:49,802 - DEBUG - Lock 2242929278784 acquired on C:\Users\hardi\.cache\huggingface\hub\.locks\models--BAAI--bge-large-en-v1.5\45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7.lock
+2024-08-09 14:24:49,817 - DEBUG - Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+2024-08-09 14:24:49,866 - DEBUG - https://cdn-lfs.huggingface.co:443 "GET /repos/7c/ec/7cecfbbb1e5b2627468d5949100139a60d432b5f80aaae3359c693d3dfb99766/45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1723451674&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyMzQ1MTY3NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy83Yy9lYy83Y2VjZmJiYjFlNWIyNjI3NDY4ZDU5NDkxMDAxMzlhNjBkNDMyYjVmODBhYWFlMzM1OWM2OTNkM2RmYjk5NzY2LzQ1ZTE5NTQ5MTRlMjliZDc0MDgwZTZjMTUxMDE2NTI3NGZmNTI3OTQyMWM4OWY3NmM0MTg4Nzg3MzJmNjRhZTc~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=Lsmn-updZXmQnuR7dJejs1J7B3b5E1dX1lIHa-55pCenBfaYNIgH4Y51fZ71oi3-UHgvPNplHFwv6nJX3XKZZFx1kNQSeiUFHBIdyLpFGSrakfUd8wKQn1Q4~WnAmUIUpHvitHW1IE7lc4CDQfB3yPCdLnPdfkvkWpE79i7VaNTikH6sJd7DUb~h5ETtJ~fT2~c-CZRCPoiI17ml6j2QYZuoNpJYVAIzV0kbCohZf~TxqthynN2keMSDfjcybp8pgUBM2X0GA5hEzwhiiqLXcNYei0WlYgoJk3yxYJDXowql4aLkn8yYip59ZCUqwHvJimVOGhXhTZaznapEhrCd3Q__&Key-Pair-Id=K3ESJI6DHPFC7 HTTP/11" 200 1340616616

@@ -105,7 +105,10 @@ def RAG_model(GROQ_API_KEY : str , pipeline : IngestionPipeline ,
 
     return query_engine
 
-    
+"""
+This function is used for loading model without any embedding docs.
+The query engine retured by this will not be 
+"""
 def model_RAG(GROQ_API_KEY : str, pipeline : IngestionPipeline , 
             llm_model_name : str  , embed_model : HuggingFaceEmbedding )-> BaseQueryEngine:
 
