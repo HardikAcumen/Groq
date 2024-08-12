@@ -110,9 +110,8 @@ vector_store , storage_context = create_milvus_vector_store("milvus_demo.db" , 1
 query_engine , pipeline = build_pipeline(llm, embed_model, vector_store= vector_store, storage_context=storage_context)
 
 pipeline.persist("pipeline")
-# vector_store.persist(persist_dir = "persist")
-# storage_context.persist(persist_dir="persist")
+vector_store.persist(persist_dir = "persist")
 
-# res = query_engine.query("What is Agent?")
+res = query_engine.query("What is Agent?")
 
-# print(res)
+print(res)
