@@ -45,7 +45,6 @@ It takes path_data (Path to folder where all text and pdf data is available)
 logger = logging.getLogger('simpleExample')
 
 def load_model():
-    # llm = Groq(model="llama3-70b-8192", api_key=GROQ_API_KEY)
     llm = Groq(model="llama-3.1-70b-versatile", api_key=GROQ_API_KEY)
     logger.info('LLM Loaded')
     
@@ -102,24 +101,20 @@ def run_pipeline(documents : list ,  pipeline : IngestionPipeline):
     return nodes
 
 
-llm , embed_model = load_model()
+# llm , embed_model = load_model()
 
-vector_store , storage_context = create_milvus_vector_store("milvus_demo.db" , 1024)
+# vector_store , storage_context = create_milvus_vector_store("milvus_demo.db" , 1024)
 
-query_engine, pipeline, index = build_pipeline(llm, embed_model, vector_store= vector_store, storage_context=storage_context)
-documents = SimpleDirectoryReader("Data").load_data()
+# query_engine, pipeline, index = build_pipeline(llm, embed_model, vector_store= vector_store, storage_context=storage_context)
+# documents = SimpleDirectoryReader("Data").load_data()
 
-Settings.embed_model = embed_model
-Settings.llm = llm
+# Settings.embed_model = embed_model
+# Settings.llm = llm
 
-nodes = pipeline.run(documents=documents)
+# nodes = pipeline.run(documents=documents)
+# print(f"Docs inserted : {len(nodes)}")
+# storage_context.docstore.add_documents(nodes)
 
-storage_context.docstore.add_documents(nodes)
-print(f"Nodes inserted: {len(nodes)}")
+# storage_context.persist(persist_dir="index")
 
-pipeline.persist("pipeline")
-
-
-
-# index.storage_context.persist(persist_dir="index")
-
+# pipeline.persist("pipeline")

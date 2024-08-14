@@ -1,8 +1,8 @@
 {
     "index_store/data": {
-        "c952ac3f-867b-4f09-a1d3-881cc3717d7e": {
+        "54459af8-3a11-4bb9-a66f-c148ce78687e": {
             "__type__": "vector_store",
-            "__data__": "{\"index_id\": \"c952ac3f-867b-4f09-a1d3-881cc3717d7e\", \"summary\": null, \"nodes_dict\": {}, \"doc_id_dict\": {}, \"embeddings_dict\": {}}"
+            "__data__": "{\"index_id\": \"54459af8-3a11-4bb9-a66f-c148ce78687e\", \"summary\": null, \"nodes_dict\": {}, \"doc_id_dict\": {}, \"embeddings_dict\": {}}"
         }
     }
 }
