@@ -45,7 +45,8 @@ It takes path_data (Path to folder where all text and pdf data is available)
 logger = logging.getLogger('simpleExample')
 
 def load_model():
-    llm = Groq(model="llama3-70b-8192", api_key=GROQ_API_KEY)
+    # llm = Groq(model="llama3-70b-8192", api_key=GROQ_API_KEY)
+    llm = Groq(model="llama-3.1-70b-versatile", api_key=GROQ_API_KEY)
     logger.info('LLM Loaded')
     
     embed_model = HuggingFaceEmbedding("BAAI/bge-large-en-v1.5")
@@ -63,7 +64,7 @@ def build_pipeline(llm : Groq , embed_model : HuggingFaceEmbedding ,
                    vector_store : MilvusVectorStore ,
                    storage_context : StorageContext):
     transformations = [
-        SentenceSplitter(chunk_size=1024, chunk_overlap=20),
+        SentenceSplitter(chunk_size=500, chunk_overlap=20),
         TitleExtractor(
             llm=llm, metadata_mode=MetadataMode.EMBED, num_workers=4
         ),
@@ -90,9 +91,9 @@ def build_pipeline(llm : Groq , embed_model : HuggingFaceEmbedding ,
     
     logger.critical("Built the pipeline")
 
-    query_engine = index.as_query_engine(llm = llm)
+    query_engine = index.as_query_engine(llm = llm , embed_model = embed_model)
 
-    return query_engine, pipeline
+    return query_engine, pipeline, index
 
     
 
@@ -105,13 +106,20 @@ llm , embed_model = load_model()
 
 vector_store , storage_context = create_milvus_vector_store("milvus_demo.db" , 1024)
 
+query_engine, pipeline, index = build_pipeline(llm, embed_model, vector_store= vector_store, storage_context=storage_context)
+documents = SimpleDirectoryReader("Data").load_data()
 
+Settings.embed_model = embed_model
+Settings.llm = llm
 
-query_engine , pipeline = build_pipeline(llm, embed_model, vector_store= vector_store, storage_context=storage_context)
+nodes = pipeline.run(documents=documents)
+
+storage_context.docstore.add_documents(nodes)
+print(f"Nodes inserted: {len(nodes)}")
 
 pipeline.persist("pipeline")
-vector_store.persist(persist_dir = "persist")
 
-res = query_engine.query("What is Agent?")
 
-print(res)
+
+# index.storage_context.persist(persist_dir="index")
+
