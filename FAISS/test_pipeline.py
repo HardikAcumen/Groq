@@ -35,9 +35,6 @@ llm = Groq(model="llama-3.1-70b-versatile", api_key=GROQ_API_KEY)
 embed_model = HuggingFaceEmbedding("BAAI/bge-large-en-v1.5")
 MIXEDBREADAI_API_KEY = os.getenv("MIXEDBREADAI_API_KEY")
 
-
-
-
 documents = SimpleDirectoryReader("Data").load_data()
 
 nodes = SentenceSplitter().get_nodes_from_documents(documents)
@@ -60,7 +57,7 @@ query_engine = index.as_query_engine(
     similarity_top_k=5,
     llm=llm , 
     embed_model = embed_model
-    # node_postprocessors=[mixedbreadai_rerank],
+    # node_postprocessors=[mixedbreadai_rerank],  -> this rerank
 )
 print("Query Engine Done")
 
@@ -79,4 +76,29 @@ while True:
         print(f"meta data: {res.source_nodes}")
         print(f"extra infor : {res.metadata}")
         print("")
+
+# load_dotenv() 
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY")  
+# llm = Groq(model="llama-3.1-70b-versatile", api_key=GROQ_API_KEY)
+# embed_model = SentenceTransformer("BAAI/bge-large-en-v1.5")
+# MIXEDBREADAI_API_KEY = os.getenv("MIXEDBREADAI_API_KEY")
+
+
+# documents = SimpleDirectoryReader("Data").load_data()
+
+
+# client = MilvusClient("milvus_demo.db")
+
+# print("Vector Store Done")
+
+# Settings.llm = llm
+# Settings.embed_model = embed_model
+
+# while True:
+#     query = input("Enter query: ")
+#     if(query == "Q" or query == "q"):
+#         break
+#     else:
+#         query_embedding = embed_model.encode(query)
+        
         

@@ -53,8 +53,15 @@ def load_model():
 
     return llm , embed_model
 
-def create_milvus_vector_store(uri : str , dimention : int ) -> StorageContext:
-    vector_store = MilvusVectorStore(uri=uri, dim=dimention, overwrite=True)
+def create_milvus_vector_store(uri : str , dimention : int , access_token) -> StorageContext:
+    vector_store = MilvusVectorStore(uri = uri,
+                                     token = access_token, 
+                                     dim=dimention, overwrite=True , 
+                                     enable_sparse= True ,
+                                     collection_name = "llama" ,
+                                     hybrid_ranker="RRFRanker", 
+                                     hybrid_ranker_params={"k": 60} 
+                                    )
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
     # logger.critical("created Vector Store , Storage Context from 'create_milvus_vector_store' ")
     return vector_store , storage_context
@@ -76,7 +83,7 @@ def build_pipeline(llm : Groq , embed_model : HuggingFaceEmbedding ,
     # logger.critical('Built Transformations' , transformations)
     
     
-    documents = SimpleDirectoryReader("Data").load_data()
+    documents = SimpleDirectoryReader("more_data").load_data()
 
     index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, embed_model=embed_model)
 
